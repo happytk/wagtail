@@ -32,6 +32,7 @@ class PagesAdminAPIEndpoint(PagesAPIEndpoint):
         'children',
         'descendants',
         'parent',
+        'main_image',
     ]
 
     body_fields = PagesAPIEndpoint.body_fields + [

@@ -19,6 +19,14 @@ const nextIcon = (
   <Icon name="arrow-right" title={STRINGS.SEE_CHILDREN} />
 );
 
+const getBackgroundImageStyle = (url) => {
+  return {
+    backgroundImage: 'url(' + url + ')',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  }
+}
+
 /**
  * One menu item in the page explorer, with different available actions
  * and information depending on the metadata of the page.
@@ -30,6 +38,12 @@ const ExplorerItem = ({ item, onClick }) => {
 
   return (
     <div className="c-explorer__item">
+      {meta.main_image ? (
+        <a
+          className="c-explorer__item__action"
+          style={getBackgroundImageStyle(meta.main_image)}
+        >&nbsp;</a>
+      ) : null}
       <Button href={`${ADMIN_URLS.PAGES}${id}/`} className="c-explorer__item__link">
         {hasChildren ? childrenIcon : null}
 

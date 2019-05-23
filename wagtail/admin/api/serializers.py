@@ -76,8 +76,21 @@ class PageDescendantsField(Field):
         ])
 
 
+class MainImageUrlField(Field):
+    def get_attribute(self, instance):
+        return instance
+
+    def to_representation(self, page):
+        if hasattr(page, 'main_image'):
+            image = page.main_image()
+            if image:
+                return image.get_rendition('fill-165x165').file.url
+        return ''
+
+
 class AdminPageSerializer(PageSerializer):
     status = PageStatusField(read_only=True)
     children = PageChildrenField(read_only=True)
     descendants = PageDescendantsField(read_only=True)
     admin_display_title = ReadOnlyField(source='get_admin_display_title')
+    main_image = MainImageUrlField(source='get_main_image')
