@@ -44,6 +44,7 @@ class PagesAdminAPIEndpoint(PagesAPIEndpoint):
         'status',
         'children',
         'admin_display_title',
+        'main_image',
     ]
 
     # Allow the parent field to appear on listings

@@ -24,6 +24,7 @@ const getBackgroundImageStyle = (url) => {
     backgroundImage: 'url(' + url + ')',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    width:'72px',
   }
 }
 
@@ -45,7 +46,6 @@ const ExplorerItem = ({ item, onClick }) => {
         >&nbsp;</a>
       ) : null}
       <Button href={`${ADMIN_URLS.PAGES}${id}/`} className="c-explorer__item__link">
-        {hasChildren ? childrenIcon : null}
 
         <h3 className="c-explorer__item__title">
           {title}
