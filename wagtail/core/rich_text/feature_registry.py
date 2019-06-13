@@ -54,7 +54,7 @@ class FeatureRegistry:
         return self.default_features
 
     def _scan_for_features(self):
-        for fn in hooks.get_hooks('register_rich_text_features'):
+        for fn in reversed(hooks.get_hooks('register_rich_text_features')):
             fn(self)
         self.has_scanned_for_features = True
 
