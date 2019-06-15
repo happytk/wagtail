@@ -32,29 +32,29 @@
     }
 
     .error {
-        background-color: $color-red;
+        background-color: $color-red-dark;
 
         &:before {
             font-family: wagtail;
-            content: '!';
+            content: map-get($icons, 'warning');
         }
     }
 
     .warning {
-        background-color: $color-orange;
+        background-color: $color-orange-dark;
 
         &:before {
             font-family: wagtail;
-            content: '!';
+            content: map-get($icons, 'warning');
         }
     }
 
     .success {
-        background-color: $color-green;
+        background-color: $color-green-dark;
 
         &:before {
             font-family: wagtail;
-            content: '9';
+            content: map-get($icons, 'success');
         }
     }
 
@@ -64,11 +64,10 @@
 
     .button-secondary {
         border-color: rgba(255, 255, 255, 0.5);
-        color: rgba(255, 255, 255, 0.8);
+        color: $color-white;
 
         &:hover {
             border-color: transparent;
-            color: $color-white;
         }
     }
 

@@ -40,6 +40,10 @@ label,
         display: inline;
     }
 
+    &.no-float {
+        float: none;
+    }
+
     @include media-breakpoint-up(sm) {
         @include column(2);
         padding-top: 1.2em;
@@ -76,7 +80,6 @@ select,
     color: $color-text-input;
     font-size: 1.2em;
     font-weight: 300;
-    outline: none;
 
     &:hover {
         background-color: $color-white;
@@ -85,7 +88,6 @@ select,
     &:focus {
         background-color: $color-input-focus;
         border-color: $color-input-focus-border;
-        outline: none;
     }
 
     &:disabled,
@@ -129,7 +131,7 @@ input[type=radio]:before {
     left: -2px;
     cursor: pointer;
     display: block;
-    content: 'K';
+    content: map-get($icons, 'radio-full');
     width: 1em;
     height: 1em;
     line-height: 1.1em;
@@ -140,7 +142,7 @@ input[type=radio]:before {
 }
 
 input[type=radio]:checked:before {
-    content: 'K';
+    content: map-get($icons, 'radio-full');
     color: $color-teal;
 }
 
@@ -159,7 +161,7 @@ input[type=checkbox]:before {
     top: -5px;
     cursor: pointer;
     display: block;
-    content: 'x';
+    content: map-get($icons, 'tick');
     line-height: 20px;
     width: 20px;
     height: 20px;

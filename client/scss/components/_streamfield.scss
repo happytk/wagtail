@@ -252,7 +252,6 @@ li.sequence-member {
         z-index: 1;
         color: $color-grey-1;
         background-color: $color-white;
-        outline: none;
 
         span {
             @include visuallyhidden();
@@ -262,7 +261,7 @@ li.sequence-member {
             transform: rotate(-45deg);
             position: absolute;
             font-family: wagtail;
-            content: 'B';
+            content: map-get($icons, 'plus-inverse');
             line-height: 1em;
             text-align: center;
         }
@@ -305,7 +304,6 @@ li.sequence-member {
         display: block;
         width: 100%;
         padding: 0 0 0.5em;
-        outline: $color-teal;
         overflow: visible;
 
         span {
