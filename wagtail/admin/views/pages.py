@@ -286,7 +286,7 @@ def create(request, content_type_app_name, content_type_model_name, parent_page_
                     # redirect back to 'next' url if present
                     return redirect(next_url)
                 # redirect back to the explorer
-                return redirect('wagtailadmin_explore', page.get_parent().id)
+                return redirect('wagtailadmin_explore', page.id)
             else:
                 # Just saving - remain on edit page for further edits
                 target_url = reverse('wagtailadmin_pages:edit', args=[page.id])
@@ -484,7 +484,7 @@ def edit(request, page_id):
                     # redirect back to 'next' url if present
                     return redirect(next_url)
                 # redirect back to the explorer
-                return redirect('wagtailadmin_explore', page.get_parent().id)
+                return redirect('wagtailadmin_explore', page.id)
             else:
                 # Just saving - remain on edit page for further edits
                 target_url = reverse('wagtailadmin_pages:edit', args=[page.id])
