@@ -82,7 +82,7 @@ class MainImageUrlField(Field):
 
     def to_representation(self, page):
         if hasattr(page, 'main_image'):
-            image = page.main_image()
+            image = page.main_image
             if image:
                 return image.get_rendition('fill-165x165').file.url
         return ''
