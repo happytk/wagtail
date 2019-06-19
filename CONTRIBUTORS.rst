@@ -376,6 +376,9 @@ Contributors
 * Michael Bunsen
 * Dillen Meijboom
 * George Hickman
+* Eric Dyken
+* Jordan Bauer
+* Fidel Ramos
 
 Translators
 ===========

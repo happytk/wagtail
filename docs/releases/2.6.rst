@@ -34,6 +34,7 @@ Other features
  * Added support for custom search handler classes to modeladmin's IndexView, and added a class that uses the default Wagtail search backend for searching (Seb Brown, Andy Babic)
  * Improved heading structure for screen reader users navigating the CMS admin (Beth Menzies, Helen Chapman)
  * Update group edit view to expose the ``Permission`` object for each checkbox (George Hickman)
+ * Improve performance of Pages for Moderation panel (Fidel Ramos)
 
 
 Bug fixes
@@ -59,7 +60,11 @@ Bug fixes
  * Make icon font implementation more screen-reader-friendly (Thibaud Colas)
  * Remove duplicate labels in image gallery and image choosers for screen reader users (Helen Chapman)
  * Restore custom "Date" icon for scheduled publishing panel in Edit page’s Settings tab (Helen Chapman)
-
+ * Added missing form media to user edit form template (Matt Westcott)
+ * Added a label to the modals’ “close” button for screen reader users (Helen Chapman, Katie Locke)
+ * Ensured the 'add child page' button displays when focused (Helen Chapman, Katie Locke)
+ * Removed buggy tab order customisations in the CMS admin (Jordan Bauer)
+ * Added labels to permission checkboxes for screen reader users (Helen Chapman, Katie Locke)
 
 Upgrade considerations
 ======================
