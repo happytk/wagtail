@@ -11,14 +11,6 @@ const childrenIcon = (
   <Icon name="folder-inverse" />
 );
 
-const editIcon = (
-  <Icon name="edit" title={STRINGS.EDIT} />
-);
-
-const nextIcon = (
-  <Icon name="arrow-right" title={STRINGS.SEE_CHILDREN} />
-);
-
 const getBackgroundImageStyle = (url) => {
   return {
     backgroundImage: 'url(' + url + ')',
@@ -61,7 +53,7 @@ const ExplorerItem = ({ item, onClick }) => {
         href={`${ADMIN_URLS.PAGES}${id}/edit/`}
         className="c-explorer__item__action c-explorer__item__action--small"
       >
-        {editIcon}
+        <Icon name="edit" title={STRINGS.EDIT_PAGE.replace('{title}', title)} />
       </Button>
       {hasChildren ? (
         <Button
@@ -69,7 +61,7 @@ const ExplorerItem = ({ item, onClick }) => {
           onClick={onClick}
           href={`${ADMIN_URLS.PAGES}${id}/`}
         >
-          {nextIcon}
+          <Icon name="arrow-right" title={STRINGS.VIEW_CHILD_PAGES_OF_PAGE.replace('{title}', title)} />
         </Button>
       ) : null}
     </div>
