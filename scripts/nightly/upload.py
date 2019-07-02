@@ -15,10 +15,13 @@ except StopIteration:
 
 print("Uploading", f.name)
 s3 = boto3.client('s3')
-s3.upload_file(str(f), 'releases.wagtail.io', 'nightly/' + f.name, ExtraArgs={'ACL':'public-read'})
+s3.upload_file(str(f), 'releases.wagtail.io', 'nightly/dist/' + f.name, ExtraArgs={'ACL':'public-read'})
 
 print("Updating latest.json")
 
-boto3.resource('s3').Object('releases.wagtail.io', 'nightly/latest.json').put(Body=json.dumps({
-    "url": 'https://releases.wagtail.io/nightly/' + f.name,
-}))
+boto3.resource('s3').Object('releases.wagtail.io', 'nightly/latest.json').put(
+    ACL='public-read',
+    Body=json.dumps({
+        "url": 'https://releases.wagtail.io/nightly/dist/' + f.name,
+    })
+)
