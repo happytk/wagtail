@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2.7 LTS (xx.xx.xxxx) - IN DEVELOPMENT
+~~~~~~~~~~~~~~~~~~~~
+
+ * Added `construct_page_listing_buttons` hook (Michael van Tellingen)
+ * Added more detailed documentation and troubleshooting for installing OpenCV for feature detection (Daniele Procida)
+ * Fix: Added line breaks to long filenames on multiple image / document uploader (Kevin Howbrook)
+ * Fix: Added https support for Scribd oEmbed provider (Rodrigo)
+ * Fix: Changed StreamField group labels color so labels are visible (Catherine Farman)
+
+
 2.6 (xx.xx.xxxx) - IN DEVELOPMENT
 ~~~~~~~~~~~~~~~~
 
@@ -36,6 +46,7 @@ Changelog
  * Added screen-reader labels for privacy toggle of collections (Helen Chapman, Katie Locke)
  * Added `construct_settings_menu` hook (Jordan Bauer, Quadric)
  * Fixed compatibility of date / time choosers with wagtail-react-streamfield (Mike Hearn)
+ * Performance optimization of several admin functions, including breadcrumbs, home and index pages (Fidel Ramos)
  * Fix: ModelAdmin no longer fails when filtering over a foreign key relation (Jason Dilworth, Matt Westcott)
  * Fix: The Wagtail version number is now visible within the Settings menu (Kevin Howbrook)
  * Fix: Scaling images now rounds values to an integer so that images render without errors (Adrian Brunyate)
