@@ -7,18 +7,16 @@ import Button from '../../components/Button/Button';
 import PublicationStatus from '../../components/PublicationStatus/PublicationStatus';
 
 // Hoist icons in the explorer item, as it is re-rendered many times.
-const childrenIcon = (
-  <Icon name="folder-inverse" />
-);
+// const childrenIcon = (
+//   <Icon name="folder-inverse" />
+// );
 
-const getBackgroundImageStyle = (url) => {
-  return {
-    backgroundImage: 'url(' + url + ')',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    width:'72px',
-  }
-}
+const getBackgroundImageStyle = (url) => ({
+  backgroundImage: 'url(' + url + ')',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  width: '72px',
+});
 
 /**
  * One menu item in the page explorer, with different available actions
