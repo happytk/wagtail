@@ -34,7 +34,7 @@ Other features
  * Revise tests to ensure all pass in Django 3.0 (Matt Westcott)
  * Add ability for users to change their own name via the account settings page (Kevin Howbrook)
  * Add ability to insert telephone numbers as links in Draftail (rich text) fields (Mikael Engström and Liam Brenner)
-
+ * Increase delay before search in the snippet chooser, to prevent redundant search request round trips (Robert Rollins)
 
 
 Bug fixes
@@ -53,6 +53,9 @@ Bug fixes
  * Output form media on add/edit image forms with custom models (Matt Westcott)
  * Fixes layout for the clear checkbox in default FileField widget (Mikalai Radchuk)
  * Remove ASCII conversion from Postgres search backend, to support stemming in non-Latin alphabets (Pavel Denisov)
+ * Prevent tab labels on page edit view from being cut off on very narrow screens (Kevin Howbrook)
+ * Very long words in page listings are now broken where necessary (Kevin Howbrook)
+ * Language chosen in user preferences no longer persists on subsequent requests (Bojan Mihelac)
 
 
 Upgrade considerations
