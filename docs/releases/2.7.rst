@@ -35,6 +35,8 @@ Other features
  * Add ability for users to change their own name via the account settings page (Kevin Howbrook)
  * Add ability to insert telephone numbers as links in Draftail (rich text) fields (Mikael Engström and Liam Brenner)
  * Increase delay before search in the snippet chooser, to prevent redundant search request round trips (Robert Rollins)
+ * Add ``WAGTAIL_EMAIL_MANAGEMENT_ENABLED`` setting to determine whether users can change their email address (Janne Alatalo)
+ * Recognise Soundcloud artist URLs as embeddable (Kiril Staikov)
 
 
 Bug fixes
@@ -56,6 +58,8 @@ Bug fixes
  * Prevent tab labels on page edit view from being cut off on very narrow screens (Kevin Howbrook)
  * Very long words in page listings are now broken where necessary (Kevin Howbrook)
  * Language chosen in user preferences no longer persists on subsequent requests (Bojan Mihelac)
+ * Prevent new block IDs from being assigned on repeated calls to ``StreamBlock.get_prep_value`` (Colin Klein)
+ * Prevent broken images in notification emails when static files are hosted on a remote domain (Eduard Luca)
 
 
 Upgrade considerations

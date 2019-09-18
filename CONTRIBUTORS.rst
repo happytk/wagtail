@@ -392,6 +392,12 @@ Contributors
 * Pavel Denisov
 * Mikael Engström
 * Zac Connelly
+* Sarath Kumar Somana
+* Dani Hodovic
+* Janne Alatalo
+* Colin Klein
+* Eduard Luca
+* Kiril Staikov
 
 Translators
 ===========
